@@ -1,4 +1,4 @@
-# Fig pre block. Keep at the top of this file.
+# Fig pre block - must be top of the file.
 export PATH="${PATH}:${HOME}/.local/bin"
 eval "$(fig init zsh pre)"
 # End block
@@ -19,7 +19,7 @@ export PATH="$PATH:/opt/X11/bin"
 export PATH="$PATH:/Library/Apple/usr/bin"
 
 # Python
-export PAHT="$PATH:$HOME/Library/Python/3.8/bin"
+export PATH="$PATH:$HOME/Library/Python/3.8/bin"
 
 # Android
 export ANDROID_HOME="$HOME/Library/Android/sdk"
@@ -60,5 +60,5 @@ alias rs="bundle exec rails s"
 alias rc="bin/spring stop && bundle exec rails c"
 # End block
 
-# Fig post block. Keep at the bottom of this file.
+# Fig post block - must be bottom of the file.
 eval "$(fig init zsh post)"
