@@ -1,6 +1,5 @@
-# Fig pre block - must be top of the file.
-export PATH="${PATH}:${HOME}/.local/bin"
-eval "$(fig init zsh pre)"
+# Fig pre block. Keep at the top of this file.
+. "$HOME/.fig/shell/zshrc.pre.zsh"
 # End block
 
 export PATH="$PATH:/opt/anaconda3/bin"
@@ -28,7 +27,7 @@ export PATH="$PATH:$ANDROID_HOME/tools"
 export PATH="$PATH:$ANDROID_HOME/tools/bin"
 
 # Flutter
-export FLUTTER_PATH="$HOME/fvm/versions/2.10.0"
+export FLUTTER_PATH="$HOME/fvm/versions/3.0.0"
 export PATH="$PATH:$FLUTTER_PATH/bin"
 export PATH="$PATH:$FLUTTER_PATH.pub-cache/bin"
 export PATH="$PATH:$FLUTTER_PATH/bin/cache/dart-sdk/bin"
@@ -53,6 +52,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Aliases
 alias mirror="scrcpy"
+alias snode="nvm use v14.19.1"
 alias demd="git branch | grep -v "develop" | grep -v "master" | xargs git branch -D"
 alias run_bmb_server="docker-compose --file docker-compose.dev.yml up"
 alias run_vt_server="docker-compose --file docker-compose.yml up"
@@ -60,5 +60,5 @@ alias rs="bundle exec rails s"
 alias rc="bin/spring stop && bundle exec rails c"
 # End block
 
-# Fig post block - must be bottom of the file.
-eval "$(fig init zsh post)"
+# Fig post block. Keep at the bottom of this file.
+. "$HOME/.fig/shell/zshrc.post.zsh"
