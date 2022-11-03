@@ -52,7 +52,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"                                       # Loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm" # Loads nvm bash_completion
 
-# Commands
 if [ -f ".nvmrc" ]; then
   nvm use
 fi
@@ -69,9 +68,7 @@ alias rspg="sudo lsof -i :5432"
 alias redis="brew services start redis"
 alias kill3000="bundle exec puma -C config/puma.rb -b tcp://127.0.0.1:3000"
 alias deploy_bmb_app="firebase deploy --token '1//0gQrNLSxAJEz9CgYIARAAGBASNwF-L9Ir-cZUE-M6FGS8M3gQe-ACXcmeit_O6WGCy1uxtD9HbOHRsC4mwGz6_6mcIzPtoO2bphI'"
-# End block
-
-# End block
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+# End block
