@@ -58,7 +58,6 @@ fi
 
 # Aliases
 alias mirror="scrcpy"
-alias snode="nvm use v14.19.1"
 alias demd="git branch | grep -v "develop" | grep -v "master" | xargs git branch -D"
 alias run_bmb_server="docker-compose --file docker-compose.yml up"
 alias run_vt_server="docker-compose --file docker-compose.yml up"
