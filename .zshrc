@@ -3,9 +3,6 @@
 # End block
 
 # Default
-export PATH="$PATH:/opt/anaconda3/bin"
-export PATH="$PATH:/opt/anaconda3/condabin"
-export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/3.10/bin"
 export PATH="$PATH:/opt/local/bin"
 export PATH="$PATH:/opt/local/sbin"
 export PATH="$PATH:/usr/local/bin"
@@ -14,12 +11,8 @@ export PATH="$PATH:/usr/bin"
 export PATH="$PATH:/bin"
 export PATH="$PATH:/usr/sbin"
 export PATH="$PATH:/sbin"
-export PATH="$PATH:/Applications/VMware\ Fusion.app/Contents/Public"
 export PATH="$PATH:/opt/X11/bin"
 export PATH="$PATH:/Library/Apple/usr/bin"
-
-# Python
-export PATH="$PATH:$HOME/Library/Python/3.8/bin"
 
 # Android
 export ANDROID_HOME="$HOME/Library/Android/sdk"
@@ -28,7 +21,9 @@ export PATH="$PATH:$ANDROID_HOME/tools"
 export PATH="$PATH:$ANDROID_HOME/tools/bin"
 
 # Flutter
-export FLUTTER_PATH="$HOME/fvm/versions/3.4.0-34.1.pre"
+export FLUTTER_PATH="$HOME/fvm/versions/3.7.0"
+[ -f ".fvm/flutter_sdk/version" ] && export FLUTTER_PATH=".fvm/flutter_sdk"
+
 export PATH="$PATH:$FLUTTER_PATH/bin"
 export PATH="$PATH:$FLUTTER_PATH.pub-cache/bin"
 export PATH="$PATH:$FLUTTER_PATH/bin/cache/dart-sdk/bin"
@@ -41,7 +36,6 @@ eval "$(rbenv init -)"
 
 # Server
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-export PATH="$HOME/Coding/Tools/elasticsearch-7.12.0/bin:$PATH"
 
 # Spree::Product.reindex
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY="YES"
@@ -66,8 +60,11 @@ alias rc="bin/spring stop && bundle exec rails c"
 alias rspg="sudo lsof -i :5432"
 alias redis="brew services start redis"
 alias kill3000="bundle exec puma -C config/puma.rb -b tcp://127.0.0.1:3000"
-alias deploy_bmb_app="firebase deploy --token '1//0gQrNLSxAJEz9CgYIARAAGBASNwF-L9Ir-cZUE-M6FGS8M3gQe-ACXcmeit_O6WGCy1uxtD9HbOHRsC4mwGz6_6mcIzPtoO2bphI'"
+alias bd_fw="flutter build web --release --web-renderer canvaskit && firebase deploy"
+alias show_gem='_show() { code $(bundle show $1) }; _show'
+alias jailbreak="palera1n -f"
+
+# End block
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-# End block
